@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="study.api_member.mapper.ManUnitedMapper">
+
+    <select id="getList" resultType="study.api_member.domain.ManUnitedVO">
+    <![CDATA[
+    SELECT * FROM system.manchesterunited
+    ]]>
+    </select>
+
+
+    <select id="get" resultType="study.api_member.domain.ManUnitedVO">
+        <![CDATA[
+    SELECT * FROM system.manchesterunited where = #{bno}
+    ]]>
+    </select>
+
+</mapper>

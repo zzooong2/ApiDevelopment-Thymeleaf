@@ -1,0 +1,38 @@
+package study.api_member.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import study.api_member.domain.ManUnitedVO;
+import study.api_member.service.ManUnitedService;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/manchesterunited/*")
+public class ManUnitedController {
+
+    @Autowired
+    ManUnitedService manUnitedService;
+
+    @GetMapping("/fc")
+    public String fc(){
+        String fc = "맨체스터 유나이티드";
+        return fc;
+    }
+
+    @RequestMapping("/players")
+    public List<ManUnitedVO> getList(){
+        System.out.println("맨체스터 유나이티드 선수명단");
+        List<ManUnitedVO> list = manUnitedService.getList();
+        return list;
+    }
+
+    @RequestMapping("/backnumber")
+    public ManUnitedVO getNumber(int bno){
+        System.out.println("선수 등번호");
+        return manUnitedService.get(bno);
+    }
+
+}
