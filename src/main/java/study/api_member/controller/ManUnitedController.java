@@ -30,9 +30,9 @@ public class ManUnitedController {
     }
 
     @RequestMapping("/backnumber")
-    public ManUnitedVO getNumber(int bno){
+    public ManUnitedVO getNumber(int backnumber){
         System.out.println("선수 등번호");
-        return manUnitedService.get(bno);
+        return manUnitedService.get(backnumber);
     }
 
 }

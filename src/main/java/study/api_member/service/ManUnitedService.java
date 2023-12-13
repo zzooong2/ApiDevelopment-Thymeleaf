@@ -9,5 +9,5 @@ import java.util.List;
 public interface ManUnitedService {
     public List<ManUnitedVO> getList();
 
-    public ManUnitedVO get(int bno);
+    public ManUnitedVO get(int backnumber);
 }

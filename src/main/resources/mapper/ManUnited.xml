@@ -10,9 +10,9 @@
     </select>
 
 
-    <select id="get" resultType="study.api_member.domain.ManUnitedVO">
+    <select id="read" resultType="study.api_member.domain.ManUnitedVO">
         <![CDATA[
-    SELECT * FROM system.manchesterunited where = #{bno}
+    SELECT * FROM system.manchesterunited where backnumber = #{backnumber}
     ]]>
     </select>
 

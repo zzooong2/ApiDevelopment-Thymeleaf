@@ -10,9 +10,10 @@ import study.api_member.mapper.ManUnitedMapper;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ManUnitedServiceImpl implements ManUnitedService{
 
+    @Autowired
     private ManUnitedMapper mapper;
 
     @Override
@@ -21,7 +22,7 @@ public class ManUnitedServiceImpl implements ManUnitedService{
     }
 
     @Override
-    public ManUnitedVO get(int bno) {
-        return mapper.read(bno);
+    public ManUnitedVO get(int backnumber) {
+        return mapper.read(backnumber);
     }
 }

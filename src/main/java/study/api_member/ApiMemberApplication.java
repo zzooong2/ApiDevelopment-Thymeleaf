@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@MapperScan(basePackages = "study.api_member.domain")
+@MapperScan(basePackages = "study.api_member.mapper")
 @SpringBootApplication
 public class ApiMemberApplication {
 

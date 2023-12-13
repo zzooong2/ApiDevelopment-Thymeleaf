@@ -11,5 +11,5 @@ import java.util.List;
 public interface ManUnitedMapper {
     public List<ManUnitedVO> getList();
 
-    public ManUnitedVO read(int bno);
+    public ManUnitedVO read(int backnumber);
 }
