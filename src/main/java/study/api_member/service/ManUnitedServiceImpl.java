@@ -10,11 +10,10 @@ import study.api_member.mapper.ManUnitedMapper;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ManUnitedServiceImpl implements ManUnitedService{
 
-    @Autowired
-    private ManUnitedMapper mapper;
+    private final ManUnitedMapper mapper;
 
     @Override
     public List<ManUnitedVO> getList(){
