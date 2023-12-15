@@ -8,8 +8,11 @@
 <body>
 <div class="container">
     <form th:action="@{register}" method="post">
+        <h5>선수명 기입</h5>
         <input type="text" class="form-control" name="name">
+        <h5>포지션 기입</h5>
         <input type="text" class="form-control" name="position">
+        <h5>등번호 기입</h5>
         <input type="text" class="form-control" name="backNumber">
 
         <button type="submit">등록</button>
