@@ -7,7 +7,15 @@ import java.util.List;
 
 @Service
 public interface ManUnitedService {
+    //선수 명단 조회
     public List<ManUnitedVO> getList();
 
-    public ManUnitedVO get(int backnumber);
+    //선수 등록
+    public void register(ManUnitedVO vo);
+
+    //선수 조회
+    public ManUnitedVO getPlayer(int backNumber);
+
+    //선수 삭제
+    public ManUnitedVO delete(int backNumber);
 }

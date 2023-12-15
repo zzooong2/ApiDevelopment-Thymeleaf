@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--
+ㅁ 타임리프 템플릿 선언
+ㅁ xml이라고 생각, 문법만 다를 뿐(xmlns -> xml의 네임스페이스)
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Manchester United</title>
+    <!-- 내부 css -->
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #656161;
+            text-align: center;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #ffc8c8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1><b>Manchester United Player List</b></h1>
+    <hr>
+
+    <hr>
+<div class="container">
+    <!-- 테이블 선언 -->
+    <table>
+        <thead>
+            <th>이름</th>
+            <th>포지션</th>
+            <th>등번호</th>
+            <th>등록</th>
+            <th>수정</th>
+        </thead>
+    <tr th:each="mufc : ${mufc}">
+        <!-- tr th:each : 행 반복문을 수행하겠다 [tr 구문 반복으로 여러 데이터 출력] -->
+        <!--
+        <td><span th:text="${mufc.name}"></span></td>
+        <td><span th:text="${mufc.position}"></span></td>
+        <td><span th:text="${mufc.backNumber}"></span></td>
+        <td><span th:text="${mufc.regDate}"></span></td>
+        <td><span th:text="${mufc.updateDate}"></span></td>
+        -->
+        <td>[[${mufc.name}]]</td>
+        <td>[[${mufc.position}]]</td>
+        <td>
+            <a th:href="@{/mu/get(backNumber=${mufc.backNumber})}">
+                [[${mufc.backNumber}]]
+            </a>
+        </td>
+        <td>[[${mufc.regDate}]]</td>
+        <td>[[${mufc.updateDate}]]</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

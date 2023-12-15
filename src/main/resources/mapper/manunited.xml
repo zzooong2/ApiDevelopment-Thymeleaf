@@ -9,11 +9,16 @@
     ]]>
     </select>
 
-
-    <select id="read" resultType="study.api_member.domain.ManUnitedVO">
-        <![CDATA[
-    SELECT * FROM system.manchesterunited where backnumber = #{backnumber}
-    ]]>
+    <select id="getPlayer" resultType="study.api_member.domain.ManUnitedVO">
+     <![CDATA[
+     SELECT * FROM system.manchesterunited where backNumber=#{backNumber}
+     ]]>
     </select>
+
+    <update id="register">
+      <![CDATA[
+        insert into system.manchesterunited (name, position, backNumber) values (#{name}, #{position}, #{backNumber})
+      ]]>
+    </update>
 
 </mapper>

@@ -21,7 +21,16 @@ public class ManUnitedServiceImpl implements ManUnitedService{
     }
 
     @Override
-    public ManUnitedVO get(int backnumber) {
-        return mapper.read(backnumber);
+    public ManUnitedVO getPlayer(int backNumber){
+        return mapper.getPlayer(backNumber);
+    }
+
+    @Override
+    public void register(ManUnitedVO vo){
+        mapper.register(vo);
+    }
+    @Override
+    public ManUnitedVO delete(int backNumber) {
+        return mapper.delete(backNumber);
     }
 }

@@ -1,10 +1,18 @@
 package study.api_member.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+import java.util.Date;
+
+@Getter
+@Setter
+@ToString
 public class ManUnitedVO {
     private String name;
     private String position;
-    private int backnumber;
+    private int backNumber;
+    private Date regDate;
+    private Date updateDate;
 }

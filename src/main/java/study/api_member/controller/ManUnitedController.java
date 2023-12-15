@@ -25,10 +25,10 @@ public class ManUnitedController {
         return list;
     }
 
-    @RequestMapping("/backnumber")
-    public ManUnitedVO getNumber(int backnumber){
-        System.out.println("선수 등번호");
-        return manUnitedService.get(backnumber);
-    }
+//    @RequestMapping("/backnumber")
+//    public ManUnitedVO getNumber(int backnumber){
+//        System.out.println("선수 등번호");
+//        return manUnitedService.get(backnumber);
+//    }
 
 }
