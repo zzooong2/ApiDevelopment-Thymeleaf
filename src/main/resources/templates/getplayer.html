@@ -3,32 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Manchester United Player</title>
-  <!-- 내부 css -->
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        td, th {
-            border: 1px solid #656161;
-            text-align: center;
-            padding: 8px;
-        }
-        tr:nth-child(even) {
-            background-color: #ffc8c8;
-        }
-
-    </style>
 </head>
 <body>
 <!-- playerlist에 컨테이너로 등록해둔 클래스 사용 -->
 <div class="container">
-    <p>선수명 : [[${get.name}]]</p>
-    <p>포지션 : [[${get.position}]]</p>
-    <p>등번호 : [[${get.backNumber}]]</p>
-    <p>등록일 : [[${get.regDate}]]</p>
-    <p>수정일 : [[${get.updateDate}]]</p>
+    <p> 선수명 : [[${get.name}]]</p>
+    <p> 포지션 : [[${get.position}]]</p>
+    <p> 등번호 : [[${get.backNumber}]]</p>
+    <p> 등록일 : [[${get.regDate}]]</p>
+    <p> 수정일 : [[${get.updateDate}]]</p>
+
+    <hr>
+    <button type="button" onclick="location.href='http://localhost:9090/mu/players';"> 1군 선수 목록 </button>
 </div>
 </body>
 </html>
