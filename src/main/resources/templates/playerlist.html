@@ -42,15 +42,8 @@
             <th>등록</th>
             <th>수정</th>
         </thead>
+    <!-- tr th:each : 행 반복문을 수행하겠다 [tr 구문 반복으로 여러 데이터 출력] -->
     <tr th:each="mufc : ${mufc}">
-        <!-- tr th:each : 행 반복문을 수행하겠다 [tr 구문 반복으로 여러 데이터 출력] -->
-        <!--
-        <td><span th:text="${mufc.name}"></span></td>
-        <td><span th:text="${mufc.position}"></span></td>
-        <td><span th:text="${mufc.backNumber}"></span></td>
-        <td><span th:text="${mufc.regDate}"></span></td>
-        <td><span th:text="${mufc.updateDate}"></span></td>
-        -->
         <td>[[${mufc.name}]]</td>
         <td>[[${mufc.position}]]</td>
         <td>
@@ -60,6 +53,13 @@
         </td>
         <td>[[${mufc.regDate}]]</td>
         <td>[[${mufc.updateDate}]]</td>
+        <!--
+        <td><span th:text="${mufc.name}"></span></td>
+        <td><span th:text="${mufc.position}"></span></td>
+        <td><span th:text="${mufc.backNumber}"></span></td>
+        <td><span th:text="${mufc.regDate}"></span></td>
+        <td><span th:text="${mufc.updateDate}"></span></td>
+        -->
     </tr>
 </table>
 </div>

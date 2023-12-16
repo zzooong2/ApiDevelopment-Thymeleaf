@@ -17,5 +17,5 @@ public interface ManUnitedService {
     public ManUnitedVO getPlayer(int backNumber);
 
     //선수 삭제
-    public ManUnitedVO delete(int backNumber);
+    public int delete(int backNumber);
 }

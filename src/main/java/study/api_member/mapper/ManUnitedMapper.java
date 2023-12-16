@@ -13,5 +13,5 @@ public interface ManUnitedMapper {
 
     public ManUnitedVO getPlayer(int backNumber);
 
-    public ManUnitedVO delete(int backNumber);
+    public int delete(int backNumber);
 }

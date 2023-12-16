@@ -21,4 +21,10 @@
       ]]>
     </update>
 
+    <delete id="delete">
+        <![CDATA[
+        delete from system.manchesterunited where backNumber = #{backNumber}
+        ]]>
+    </delete>
+
 </mapper>

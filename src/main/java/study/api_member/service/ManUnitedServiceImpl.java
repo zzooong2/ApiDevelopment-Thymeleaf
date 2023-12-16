@@ -1,8 +1,6 @@
 package study.api_member.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import study.api_member.domain.ManUnitedVO;
 import study.api_member.mapper.ManUnitedMapper;
@@ -30,7 +28,7 @@ public class ManUnitedServiceImpl implements ManUnitedService{
         mapper.register(vo);
     }
     @Override
-    public ManUnitedVO delete(int backNumber) {
+    public int delete(int backNumber) {
         return mapper.delete(backNumber);
     }
 }

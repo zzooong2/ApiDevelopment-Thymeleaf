@@ -1,7 +1,6 @@
 package study.api_member.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,23 +53,9 @@ public class ThymeleafController {
 
     // 선수 삭제
     @RequestMapping("/delete")
-    public ManUnitedVO deletePlayer(int backnumber){
-        ManUnitedVO delete = manUnitedService.delete(backnumber);
-        return delete;
+    public String deletePlayer(Integer backNumber) {
+        manUnitedService.delete(backNumber);
+        return "redirect:/mu/players";
     }
 
-
-
-//    @RequestMapping("/players")
-//    public ModelAndView selectPlayersInfo(){
-//        ModelAndView mav = new ModelAndView("manunited");
-//        ManUnitedVO vo = new ManUnitedVO();
-//        vo.setName("김현중");
-//        vo.setPosition("CDM");
-//        vo.setBacknumber(8);
-//
-//        mav.addObject("title", "ManchesterUnited");
-//        mav.addObject("vo", vo);
-//        return mav;
-//    }
 }
