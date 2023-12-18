@@ -27,8 +27,14 @@ public class ManUnitedServiceImpl implements ManUnitedService{
     public void register(ManUnitedVO vo){
         mapper.register(vo);
     }
+
     @Override
     public int delete(int backNumber) {
         return mapper.delete(backNumber);
+    }
+
+    @Override
+    public int modify(ManUnitedVO vo){
+        return mapper.modify(vo);
     }
 }

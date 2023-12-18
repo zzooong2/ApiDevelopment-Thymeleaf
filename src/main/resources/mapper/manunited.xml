@@ -27,4 +27,16 @@
         ]]>
     </delete>
 
+    <update id="modify">
+        <![CDATA[
+        update system.manchesterunited
+        set
+        name = #{name},
+        position = #{position},
+        backNumber = #{backNumber}
+        where backNumber = #{backNumber}
+        ]]>
+    </update>
+
+
 </mapper>

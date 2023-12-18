@@ -18,4 +18,7 @@ public interface ManUnitedService {
 
     //선수 삭제
     public int delete(int backNumber);
+
+    //선수 수정
+    public int modify(ManUnitedVO vo);
 }

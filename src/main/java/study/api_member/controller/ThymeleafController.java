@@ -58,4 +58,15 @@ public class ThymeleafController {
         return "redirect:/mu/players";
     }
 
+    @GetMapping("/modify")
+    public String modifyPlayerForm(){
+        return "modify";
+    }
+    @PostMapping("/modify")
+    public String modifyPlayer(ManUnitedVO vo, Model model) {
+        int modify = manUnitedService.modify(vo);
+        model.addAttribute("modify", modify);
+        return "redirect:/mu/players";
+    }
+
 }

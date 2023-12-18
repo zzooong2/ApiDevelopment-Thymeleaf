@@ -13,6 +13,4 @@ public class ManUnitedVO {
     private String name;
     private String position;
     private int backNumber;
-    private Date regDate;
-    private Date updateDate;
 }

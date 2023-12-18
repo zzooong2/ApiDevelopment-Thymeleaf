@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Modify</title>
+</head>
+<body>
+    <h1> 선수 수정 </h1>
+    <hr>
+<div class="container">
+    <form th:action="@{modify}" method="post" name="modify">
+        <h2> 선수명 </h2>
+        <input type="text" name="name" th:value="${name}">
+        <h2> 포지션 </h2>
+        <input type="text" name="position" th:value="${position}">
+        <h2> 등번호 </h2>
+        <input type="text" name="backNumber" th:value="${backNumber}">
+
+        <button type="submit"> 수정 </button> <button type="button" onclick="location.href='http://localhost:9090/mu/players'"> 취소 </button>
+    </form>
+</div>
+</body>
+</html>
