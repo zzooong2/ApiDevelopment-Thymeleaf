@@ -15,6 +15,9 @@
             text-align: center;
             padding: 8px;
         }
+        h1 {
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -35,7 +38,7 @@
 <body>
 <div class="container">
     <tr th:each="get : ${get}">
-        <<td>[[${get.name}]]</td>
+        <td>[[${get.name}]]</td>
         <td>[[${get.position}]]</td>
         <td>[[${get.backNumber}]]</td>
 
