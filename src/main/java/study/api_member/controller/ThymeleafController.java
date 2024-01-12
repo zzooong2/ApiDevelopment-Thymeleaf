@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import study.api_member.domain.ManUnitedVO;
 import study.api_member.service.ManUnitedService;
 
@@ -28,7 +29,7 @@ public class ThymeleafController {
 
     // 선수 개인 프로필 보기
     @GetMapping("/get")
-    public String getPlayer(Model model, int backNumber){
+    public String getPlayer(Model model, @RequestParam(name="backNumber") int backNumber){
         ManUnitedVO player = manUnitedService.getPlayer(backNumber);
         model.addAttribute("get", player);
         return "getplayer";
